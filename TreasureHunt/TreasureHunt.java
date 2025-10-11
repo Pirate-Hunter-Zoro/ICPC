@@ -24,6 +24,10 @@ public class TreasureHunt {
         cellsToQuery[2] = new int[] { 4, 2 };
         cellsToQuery[3] = new int[] { 4, 4 };
         for (int[] query : cellsToQuery) {
+            if (query[0] == 4 && query[1] == 4) {
+                // Process of elimination - no need to query here
+                return query;
+            }
             System.out.println("? " + query[0] + " " + query[1]);
             ;
             int response = nextInt();
