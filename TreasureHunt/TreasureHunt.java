@@ -29,7 +29,7 @@ public class TreasureHunt {
                 return query;
             }
             System.out.println("? " + query[0] + " " + query[1]);
-            ;
+            
             int response = nextInt();
             if (response == 1) {
                 return query;
@@ -43,22 +43,22 @@ public class TreasureHunt {
         // If yes, ask top left
         // If no, ask top middle
         System.out.println("? " + row + " " + (col - 1));
-        ;
+        
         int response = nextInt();
         if (response == 1) {
             // Top left
             System.out.println("? " + (row-1) + " " + (col-1));
-            ;
+            
             response = nextInt();
             if (response == 1) {
                 return new int[]{row-1,col-1};
             } else {
-                return new int[]{row+1,col-1};
+                return new int[]{row,col-1};
             }
         } else {
             // Top middle
             System.out.println("? " + (row-1) + " " + col);
-            ;
+            
             response = nextInt();
             if (response == 1) {
                 return new int[]{row-1, col};
