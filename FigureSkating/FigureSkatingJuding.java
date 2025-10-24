@@ -24,6 +24,8 @@ public class FigureSkatingJuding {
             sum += (double)values[i];
             sumSquared += (double)(values[i]*values[i]);
         }
+        // Check for 0 badness - before calculating badness check is sum and sumSquared is 0 - also if sum*sum is exactly k times sumSquared
+        // Everything is a long except for badness which is a double
         while (right < n) {
             // Slick math trick
             double badness = -(sum*sum)/((double)k) + sumSquared;
